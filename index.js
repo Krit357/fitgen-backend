@@ -21,8 +21,8 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 
 app.use(cors({
-  origin: 'https://jsd-fitgen-frontend.vercel.app', 
-  credentials: true 
+  credentials: true,
+  origin: 'https://jsd-fitgen-frontend.vercel.app' 
 }));
 
 // app.use('/users', userRoutes)
