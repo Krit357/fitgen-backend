@@ -12,6 +12,7 @@ const checkAuth = require('./middleware/check-auth')
 const cookieParser = require('cookie-parser')
 
 const app = express()
+app.use(cors());
 
 connectDatabase()
 
@@ -19,12 +20,6 @@ app.use(morgan("dev"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cookieParser())
-
-app.use(cors(
-  // {
-  //   origin: "*",
-  // }
-));
 
 // app.use('/users', userRoutes)
 // app.use('/userInfo', checkAuth, userInfoRoutes)
