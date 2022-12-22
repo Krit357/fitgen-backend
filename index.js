@@ -30,6 +30,10 @@ app.use(cors(
 // app.use('/userInfo', checkAuth, userInfoRoutes)
 app.use('/activities', activityRoutes)
 
+app.get('/', (req, res) => {
+  res.send({ message: 'Welcome to MongoDB', success: 'yes' })
+})
+
 app.use((req, res, next) => {
   const err = new Error('Not found')
   err.status = 404
@@ -42,11 +46,6 @@ app.use((err, req, res, next) => {
     message: err.message
   })
 })
-
-app.get('/', (req, res) => {
-  res.send({ message: 'Welcome to MongoDB', success: 'yes' })
-})
-
 app.listen(PORT, () => {
   console.log('Server is running at http://localhost:%d', PORT)
 })
