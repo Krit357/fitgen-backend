@@ -7,10 +7,6 @@ const { activitiesList, addActivity, oneActivity, updateActivity, deleteActivity
 
 router.get('/', activitiesList)
 
-router.get('/test', async (req, res) => {
-  return req.json({ message: 'Test something' });
-});
-
 router.post('/create', addActivity)
 
 router.get("/:activityId", oneActivity)
