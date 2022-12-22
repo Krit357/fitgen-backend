@@ -21,9 +21,9 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 
 app.use(cors(
-  {
-    origin: "*",
-  }
+  // {
+  //   origin: "*",
+  // }
 ));
 
 // app.use('/users', userRoutes)
