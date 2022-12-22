@@ -26,7 +26,7 @@ const activitiesList = (req, res, next) => {
                     isSuccess: doc.isSuccess,
                     request: {
                         type: "GET",
-                        url: `http://localhost:${PORT}/activities/${doc._id}`
+                        url: `https://fitgen-backend-fsxwpyquj-krit357.vercel.app/activities/${doc._id}`
                     }
                 }
             })
@@ -72,7 +72,7 @@ const addActivity = async (req, res, next) => {
                 isSuccess: result.isSuccess,
                 request: {
                     type: 'GET',
-                    url: `http://localhost:${PORT}/activities/${result._id}`
+                    url: `https://fitgen-backend-fsxwpyquj-krit357.vercel.app/activities/${result._id}`
                 }
             }
         })
@@ -99,7 +99,7 @@ const oneActivity = (req, res, next) => {
               activity: doc,
               request: {
                   type: 'GET',
-                  url: `http://localhost:${PORT}/activities`
+                  url: `https://fitgen-backend-fsxwpyquj-krit357.vercel.app/activities`
               }
           })
         } else {
@@ -144,7 +144,7 @@ const updateActivity = (req, res, next) => {
                 message: 'Activity updated',
                 request: {
                     type: 'GET',
-                    url: `http://localhost:${PORT}/activities/${id}`
+                    url: `https://fitgen-backend-fsxwpyquj-krit357.vercel.app/activities/${id}`
                 }
             });
         })
@@ -168,7 +168,7 @@ const deleteActivity = (req, res, next) => {
             message: 'Activity deleted',
             request: {
                 type: 'POST',
-                url: `http://localhost:${PORT}/activities`,
+                url: `https://fitgen-backend-fsxwpyquj-krit357.vercel.app/activities`,
             }
         });
       })

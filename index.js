@@ -21,7 +21,7 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://jsd-3-project-nxe7.vercel.app', 
   credentials: true 
 }));
 
