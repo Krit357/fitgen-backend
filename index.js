@@ -25,8 +25,8 @@ app.use(cors({
   credentials: true 
 }));
 
-app.use('/users', userRoutes)
-app.use('/userInfo', checkAuth, userInfoRoutes)
+// app.use('/users', userRoutes)
+// app.use('/userInfo', checkAuth, userInfoRoutes)
 app.use('/activities', activityRoutes)
 
 app.use((req, res, next) => {
@@ -43,7 +43,7 @@ app.use((err, req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-  res.send({ message: 'Welcome to MongoDB' })
+  res.send({ message: 'Welcome to MongoDB', success: 'yes' })
 })
 
 app.listen(PORT, () => {
